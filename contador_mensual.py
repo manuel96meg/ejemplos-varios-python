@@ -1,5 +1,5 @@
 """
-Crear un programa que sea un controlador de gastos mensuales, que podamos 
+Crear un programa que sea un controlador de gastos mensuales, que podamos
 ingresar gastos e ingresos mes a mes y nos vaya actualizando la información.
 """
 
@@ -20,22 +20,22 @@ class DineroEsteMes:
         self.mes = mes
         self.entra = entra
         self.sale = sale
-    
+
     def ingresar (self,nuevoEntra=0):
         self.cuenta += self.entra + nuevoEntra
         self.entra += nuevoEntra
-    
+
     def descontar (self,nuevoSale=0):
         self.cuenta -= self.sale + nuevoSale
         self.sale += nuevoSale
-    
+
     def mostrar(self):
         if self.cuenta > 0:
             print(f'El mes de -{self.mes}- tuvo un movimiento total de +{self.cuenta}, con {self.entra} ingresos y {self.sale} egresos')
         else:
             print(f'El mes de -{self.mes}- tuvo un movimiento total de {self.cuenta}, con {self.entra} ingresos y {self.sale} egresos')
 
-stringMes = str(input('Escriba el MES actual [para finalizar escriba 0]:'))
+stringMes = str(input('Escriba el MES que desee modificar [para finalizar escriba 0]:'))
 
 while stringMes != "0":
     if not (meses.__contains__(stringMes)):
@@ -45,7 +45,7 @@ while stringMes != "0":
         mesActual = DineroEsteMes(ingresos,gastos,stringMes,0)
         meses[stringMes] = mesActual
         verTotalYMeses(meses,dineroTotal)
-        stringMes = str(input('Escriba el MES actual [para finalizar escriba 0]:'))
+        stringMes = str(input('Escriba el MES que desee modificar [para finalizar escriba 0]:'))
     else:
         ingresos = float(input(f'Anote ingresos del mes {stringMes}: '))
         gastos = float(input(f'Anote gastos del mes {stringMes}: '))
@@ -54,6 +54,6 @@ while stringMes != "0":
         mesActual.ingresar(ingresos)
         mesActual.descontar(gastos)
         verTotalYMeses(meses,dineroTotal)
-        stringMes = str(input('Escriba el MES actual [para finalizar escriba 0]:'))
+        stringMes = str(input('Escriba el MES que desee modificar [para finalizar escriba 0]:'))
 
 verTotalYMeses(meses,dineroTotal)
