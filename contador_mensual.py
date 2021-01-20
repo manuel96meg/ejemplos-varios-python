@@ -1,6 +1,6 @@
 """
 Crear un programa que sea un controlador de gastos mensuales, que podamos
-ingresar gastos e ingresos mes a mes y nos vaya actualizando la información.
+ingresar gastos e ingresos mes a mes y mostrandonos al final todos los datos ingresados.
 """
 
 meses = {}
