@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- el fromato de 'src' en este caso requiere de esta identacion par los corchetes,
+            Los corchetes dobles parecerian representar tambien variables en HTML-->
+
+        <script type = "text/javascript" src = "{{
+            url_for('static', filename = 'iSayHello.js') }}" ></script>
+
+        <!-- [../static/iSayHello.js] esto tambien sirve en donde dice src-->
+    </head>
+    <body>
+        <!-- on click hace que se ejecute la funcion dentro del archivo js-->
+        <input type="button" onclick= "sayHello()" value="Say Hello" />
+    </body>
+</html>

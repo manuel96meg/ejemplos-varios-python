@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<BODY>
+    <!-- el "localhost:5000/result indica" A DONDE se mandara
+     el Formulario cuando se de click en el input 'submit'-->
+    <form action="http://localhost:5000/result" method="POST">
+        <p>Name</p>
+        <p><input type="text" name="Name"/></p>
+        <p>Fisica</p>
+        <p><input type="text" name="Fisica"/></p>
+        <p>Quimica</p>
+        <p><input type="text" name="Quimica"/></p>
+        <p>Matematica</p>
+        <p><input type="text" name="Matematica"/></p>
+        <!-- Para no ser incluido en el diccionario del Formulario, en vez de 'name' debe decir 'value'-->
+        <p><input type="submit" value="Ingresar"/></p>
+    </form>
+</BODY>
+</html>

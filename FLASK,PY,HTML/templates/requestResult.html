@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<BODY>
+
+    <table border=1>
+        {% for key,values in result.items() %}
+            <tr>
+                <th> {{key}}</th>
+                <td> {{values}}</td>
+            </tr>
+            {% endfor %}
+    </table>
+
+</BODY>
+</html>
